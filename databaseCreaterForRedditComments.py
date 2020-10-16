@@ -3,7 +3,7 @@ import json
 from datetime import datetime
 
 #Date of reddit comments i use
-timeframe = '2009-05'
+timeframe = '2009-05' ##date of the data we will use from reddit comments
 sql_transaction = []
 
 connection = sqlite3.connect( '{}.db'.format(timeframe))
@@ -95,8 +95,9 @@ if __name__ == "__main__":
     create_table()
     row_counter = 0
     paired_rows = 0
-
-    with open("C:/Users/HP/Desktop/I MADE THESE/Py Assistant/reddit data/RC_{}".format(timeframe), buffering=1000) as f:
+    
+    ## It should find the data docs from the given pathway.
+    with open("C:/Py Assistant/reddit data/RC_{}".format(timeframe), buffering=1000) as f: 
         for row in f:
              row_counter += 1
              row = json.loads(row)
