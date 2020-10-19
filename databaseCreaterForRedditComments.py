@@ -2,7 +2,7 @@ import sqlite3
 import json
 from datetime import datetime
 
-#Date of reddit comments i use
+
 timeframe = '2009-05' ##date of the data we will use from reddit comments
 sql_transaction = []
 
